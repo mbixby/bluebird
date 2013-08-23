@@ -2,6 +2,8 @@
 
 Bluebird is a Sublime theme embodying principles of deference and clarity.
 
+![](https://raw.github.com/mbixby/bluebird/master/preview/first.png)  
+
 ## Features
 
 * sharp, tasteful interface with focus on content
@@ -30,9 +32,16 @@ Development is in progress. The theme is not optimized for retina or various int
 * For an example, see `settings/Preferences.sublime-settings`
 * *(optional)* Add `"custom_folder_icons": true` to your settings to enable folder icons
 
+## Preview
+
+![](https://raw.github.com/mbixby/bluebird/master/preview/panels.png)  
+![](https://raw.github.com/mbixby/bluebird/master/preview/fullscreen.png)  
+![](https://raw.github.com/mbixby/bluebird/master/preview/quick-panel.png)  
+![](https://raw.github.com/mbixby/bluebird/master/preview/autocompletion.png)  
+
 ## Attribution
 
-Based on Soda Theme by Ian Hill (http://buymeasoda.com/)
+Based on Soda Theme by Ian Hill (http://buymeasoda.com/).   
 Inspired by Xcode 5 and things on the table.
 
 ## License
