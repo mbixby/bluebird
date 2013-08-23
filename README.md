@@ -4,6 +4,8 @@ Bluebird is a Sublime theme embodying principles of deference and clarity.
 
 ![](https://raw.github.com/mbixby/bluebird/master/preview/first.png)  
 
+See [Blackbird](https://github.com/mbixby/blackbird) & [Facebook](https://github.com/mbixby/facebook-color-scheme) for a darker look.
+
 ## Features
 
 * sharp, tasteful interface with focus on content
