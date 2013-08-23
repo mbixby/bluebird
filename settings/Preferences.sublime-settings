@@ -1,0 +1,25 @@
+{
+  "bold_folder_labels": false,
+  "caret_style": "smooth",
+  "close_windows_when_empty": false,
+  "color_scheme": "Packages/Github.tmTheme",
+  "draw_centered": true,
+  "font_face": "Monaco Lives",
+  "font_size": 14,
+  "gutter": false,
+  "hide_open_files": false,
+  "highlight_modified_tabs": true,
+  "line_numbers": false,
+  "line_padding_bottom": 0,
+  "line_padding_top": 4,
+  "new_window_settings":
+  {
+    "show_minimap": false
+  },
+  "scroll_past_end": true,
+  "show_tab_close_buttons": false,
+  "theme": "Bluebird.sublime-theme",
+  "use_simple_full_screen": true,
+  "word_wrap": true,
+  "wrap_width": 80
+}
