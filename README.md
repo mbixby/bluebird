@@ -40,6 +40,7 @@ Development is in progress. The theme is not optimized for retina or various int
 ![](https://raw.github.com/mbixby/bluebird/master/preview/fullscreen.png)  
 ![](https://raw.github.com/mbixby/bluebird/master/preview/quick-panel.png)  
 ![](https://raw.github.com/mbixby/bluebird/master/preview/autocompletion.png)  
+![](https://raw.github.com/mbixby/bluebird/master/preview/icon.png)  
 
 ## Attribution
 
