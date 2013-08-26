@@ -433,11 +433,11 @@
     </dict>
     <dict>
       <key>comment</key>
-      <string>Show well-known functions from Express and Mocha in Go To Symbol view</string>
+      <string>Show section-defining functions from Express and Mocha in Go To Symbol view</string>
       <key>name</key>
       <string>meta.function.symbols.coffee</string>
       <key>begin</key>
-      <string>^\s*(describe|it|app\.(get|post|put|all|del|delete))[^\w]</string>
+      <string>^\s*(describe|beforeEach|afterEach|it)[^\w]</string>
       <key>end</key>
       <string>$</string>
       <key>patterns</key>
@@ -452,7 +452,7 @@
         <key>0</key>
         <dict>
           <key>name</key>
-          <string>keyword.other.coffee</string>
+          <string>entity.name.function</string>
         </dict>
       </dict>
     </dict>
@@ -487,109 +487,11 @@
       <string>variable.language.coffee</string>
     </dict>
     <dict>
-      <key>comment</key>
-      <string>Ember.js class instantiation</string>
-      <key>captures</key>
-      <dict>
-        <key>1</key>
-        <dict>
-          <key>name</key>
-          <string>entity.name.section</string>
-        </dict>
-        <key>2</key>
-        <dict>
-          <key>name</key>
-          <string>support.class.coffee</string>
-        </dict>
-        <key>3</key>
-        <dict>
-          <key>name</key>
-          <string>keyword.operator.new.coffee</string>
-        </dict>
-      </dict>
-      <key>match</key>
-      <string>(?:(?:[@a-z][\.\w]*)\s+[=:]\s+)?([@A-Z][\.\w]*\.)?([@\w]+)\.(create[\w]*)</string>
-      <key>name</key>
-      <string>meta.class.instance.constructor</string>
-    </dict>
-    <dict>
       <key>match</key>
       <string>\b(debugger|\\)\b</string>
       <key>name</key>
       <string>keyword.other.coffee</string>
     </dict>
- <!--    <dict>
-      <key>match</key>
-      <string>(?x)\b(
-        Array|ArrayBuffer|Blob|Boolean|Date|document|event|Function|
-        Int(8|16|32|64)Array|Math|Map|Number|
-        Object|Proxy|RegExp|Set|String|WeakMap|
-        window|Uint(8|16|32|64)Array|XMLHttpRequest
-      )\b</string>
-      <key>name</key>
-      <string>support.class.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>((?&lt;=console\.)(debug|warn|info|log|error|time|timeEnd|assert))\b</string>
-      <key>name</key>
-      <string>support.function.console.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)\b(
-        decodeURI(Component)?|encodeURI(Component)?|eval|parse(Float|Int)|require
-      )\b</string>
-      <key>name</key>
-      <string>support.function.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)((?&lt;=\.)(
-        apply|call|concat|every|filter|forEach|from|hasOwnProperty|indexOf|
-        isPrototypeOf|join|lastIndexOf|map|of|pop|propertyIsEnumerable|push|
-        reduce(Right)?|reverse|shift|slice|some|sort|splice|to(Locale)?String|
-        unshift|valueOf
-      ))\b</string>
-      <key>name</key>
-      <string>support.function.method.array.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)((?&lt;=Array\.)(
-        isArray
-      ))\b</string>
-      <key>name</key>
-      <string>support.function.static.array.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)((?&lt;=Object\.)(
-        create|definePropert(ies|y)|freeze|getOwnProperty(Descriptors?|Names)|
-        getProperty(Descriptor|Names)|getPrototypeOf|is(Extensible|Frozen|Sealed)?|
-        isnt|keys|preventExtensions|seal
-      ))\b</string>
-      <key>name</key>
-      <string>support.function.static.object.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)((?&lt;=Math\.)(
-        abs|acos|acosh|asin|asinh|atan|atan2|atanh|ceil|cos|cosh|exp|expm1|floor|
-        hypot|log|log10|log1p|log2|max|min|pow|random|round|sign|sin|sinh|sqrt|
-        tan|tanh|trunc
-      ))\b</string>
-      <key>name</key>
-      <string>support.function.static.math.coffee</string>
-    </dict>
-    <dict>
-      <key>match</key>
-      <string>(?x)((?&lt;=Number\.)(
-        is(Finite|Integer|NaN)|toInteger
-      ))\b</string>
-      <key>name</key>
-      <string>support.function.static.number.coffee</string>
-    </dict> -->
     <dict>
       <key>match</key>
       <string>\b(Infinity|NaN|undefined)\b</string>
@@ -647,6 +549,63 @@
     <dict>
       <key>include</key>
       <string>#numeric</string>
+    </dict>
+    <dict>
+      <key>comment</key>
+      <string>
+        Class (any dependency on outside class shold be penalized)
+      </string>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>entity.name.section</string>
+        </dict>
+        <key>2</key>
+        <dict>
+          <key>name</key>
+          <string>support.class.coffee</string>
+        </dict>
+        <key>3</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.operator.new.coffee</string>
+        </dict>
+        <key>4</key>
+        <dict>
+          <key>name</key>
+          <string>support.class.coffee</string>
+        </dict>
+        <key>5</key>
+        <dict>
+          <key>name</key>
+          <string>keyword.operator.new.coffee</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(?x)
+        # Space
+        \s+
+        # Exclude reserved keywords
+        (?!=NaN|Infinity|NaN)
+        # Namespace, e.g. Abc.Def
+        (?:([@A-Z][\.\w]*\.))?
+        # Allow '@class.create' but disallow '@class'
+        (?:
+          (?:
+            # Class
+            ([@A-Z][\w]*)   
+            # Constructor
+            (\.create[\w]*)
+          )|(?:
+            # Class
+            ([A-Z][\w]*)   
+            # Constructor
+            (\.create[\w]*)?
+          )
+        )
+      </string>
     </dict>
   </array>
   <key>repository</key>
